@@ -41,7 +41,7 @@ body {
 	font-size: 16px;
 	font-style: normal;
 	font-weight: 400;
-	line-height: 125%; /* 20px */
+	line-height: 125%;
 }
 
 html {
@@ -57,13 +57,13 @@ h1 {
 	color: var(--primary-500);
 	font-size: clamp(28px, 4.5vw, 52px);
 	font-weight: 500;
-	line-height: 125%; /* 65px */
+	line-height: 125%;
 }
 h2 {
 	color: var(--black);
 	font-size: clamp(24px, 4vw, 42px);
 	font-weight: 500;
-	line-height: 125%; /* 52.5px */
+	line-height: 125%;
 	letter-spacing: 1px;
 }
 
@@ -101,7 +101,7 @@ h2 {
 	text-align: center;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 125%; /* 20px */
+	line-height: 125%;
 
 	&:hover {
 		cursor: pointer;
@@ -116,7 +116,7 @@ h2 {
 	&-uppercase {
 		font-size: clamp(18px, 3vw, 24px);
 		font-weight: 500;
-		line-height: 24.7px; /* 102.917% */
+		line-height: 102.917%;
 		text-transform: uppercase;
 	}
 
@@ -184,22 +184,17 @@ h2 {
 	&-next {
 	}
 }
-a.button {
-	// display: inline-block;
-}
 a {
 	text-decoration: none;
 	color: inherit;
-
 	&:hover {
 		cursor: pointer;
-		// color: inherit;
-		color: var(--primary-500);
+		// color: var(--primary-500);
+		color: inherit;
 	}
-
 	&:active {
-		// color: inherit;
-		color: var(--primary-500);
+		// color: var(--primary-500);
+		color: inherit;
 	}
 }
 .link {
@@ -207,10 +202,10 @@ a {
 		color: var(--gray-500);
 		font-size: 18px;
 		font-weight: 400;
-		line-height: 125%; /* 22.5px */
+		line-height: 125%;
 
 		&:hover {
-			color: var(--black);
+			color: var(--primary-500);
 		}
 		&:active {
 			color: var(--primary-500);
@@ -230,10 +225,9 @@ a {
 	display: flex;
 	flex-direction: column;
 	gap: 15px;
-	color: var(--gray-500);
 	font-size: clamp(14px, 3vw, 16px);
 	font-weight: 400;
-	line-height: 165%; /* 26.4px */
+	line-height: 165%;
 
 	&-gray {
 		color: var(--gray-500);
@@ -245,18 +239,18 @@ a {
 }
 @media (max-width: 480px) {
 	.text {
-		line-height: 135%; /* 18.9px */
+		line-height: 135%;
 	}
 }
 .p {
 	color: var(--black);
 	font-size: clamp(14px, 3vw, 16px);
 	font-weight: 400;
-	line-height: 125%; /* 20px */
+	line-height: 125%;
 }
 @media (max-width: 480px) {
 	.p {
-		line-height: 135%; /* 18.9px */
+		line-height: 135%;
 	}
 }
 
@@ -302,7 +296,7 @@ a {
 		font-family: Poppins;
 		font-size: 14px;
 		font-weight: 500;
-		line-height: 20px; /* 142.857% */
+		line-height: 142.857%;
 
 		&:hover {
 			background: var(--gray-100);
@@ -384,8 +378,12 @@ a {
 			color: var(--primary-500);
 			font-size: 24px;
 			font-weight: 500;
-			line-height: 24.7px; /* 102.917% */
+			line-height: 102.917%;
 			text-transform: uppercase;
+
+			&:hover {
+				color: var(--primary-200);
+			}
 		}
 
 		&-social {
@@ -501,7 +499,7 @@ a {
 		color: var(--gray-800);
 		font-size: 14px;
 		font-weight: 400;
-		line-height: 125%; /* 17.5px */
+		line-height: 125%;
 
 		&::after {
 			content: '';
@@ -609,8 +607,11 @@ a {
 			color: var(--primary-500);
 			font-size: clamp(18px, 1.5vw, 24px);
 			font-weight: 500;
-			line-height: 24.7px; /* 102.917% */
+			line-height: 102.917%;
 			text-transform: uppercase;
+			&:hover {
+				color: var(--primary-200);
+			}
 		}
 
 		&-social {
@@ -720,7 +721,7 @@ a {
 		color: var(--black);
 		font-size: clamp(18px, 2.5vw, 24px);
 		font-weight: 400;
-		line-height: 125%; /* 30px */
+		line-height: 125%;
 	}
 
 	&__title {
@@ -785,7 +786,7 @@ a {
 	&__text {
 		font-size: clamp(18px, 3vw, 28px);
 		font-weight: 400;
-		line-height: 125%; /* 35px */
+		line-height: 125%;
 	}
 }
 @media (max-width: 1300px) {
@@ -931,7 +932,7 @@ a {
 	&__text {
 		font-size: clamp(16px, 2.5vw, 20px);
 		font-weight: 400;
-		line-height: 135%; /* 27px */
+		line-height: 135%;
 	}
 
 	&__number {
@@ -939,7 +940,7 @@ a {
 		font-family: 'RozhaOne';
 		font-size: clamp(40px, 7.5vw, 128px);
 		font-weight: 400;
-		line-height: 57.813%; /* 74px */
+		line-height: 57.813%;
 		white-space: nowrap;
 	}
 
@@ -1000,9 +1001,6 @@ a {
 				width: 400px;
 			}
 		}
-		&__number {
-			line-height: 30px;
-		}
 	}
 }
 @media (max-width: 480px) {
@@ -1030,23 +1028,36 @@ a {
 
 	&__filter {
 		display: flex;
-		flex-wrap: wrap;
-		justify-content: center;
+		justify-content: flex-start;
 		gap: 10px;
+		overflow-x: auto;
+		padding: 2px;
 
 		&-wrapper {
-			max-width: 100%;
-			overflow-x: auto;
-			&::-webkit-scrollbar {
-				height: 10px;
-			}
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+			gap: 15px 10px;
+			width: 100%;
 		}
 	}
 
 	&__tab {
 		padding: 8px 30px;
 		border-radius: 8px;
+		color: var(--primary-500);
 		background: var(--gray-200);
+		font-size: clamp(16px, 2.5vw, 20px);
+		line-height: 135%;
+
+		&:hover {
+			color: var(--white);
+			background: var(--primary-500);
+		}
+
+		&:focus-visible {
+			outline-color: var(--primary-500);
+		}
 
 		&-active {
 			color: var(--white);
@@ -1058,7 +1069,42 @@ a {
 		}
 	}
 
-	&__cards {
+	&__search {
+		display: flex;
+		max-width: 320px;
+		padding: 8px 52px 8px 30px;
+		align-items: center;
+		border-radius: 8px;
+		border: 1px solid var(--primary-200);
+		background: var(--gray-200);
+		color: var(--primary-500);
+		font-size: clamp(16px, 2.5vw, 20px);
+		line-height: 135%;
+
+		&::placeholder {
+			color: var(--primary-500);
+		}
+		&:focus-visible {
+			outline-color: var(--primary-500);
+		}
+
+		&-group {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: flex-end;
+		}
+
+		&-icon {
+			content: '';
+			position: absolute;
+			height: 18px;
+			width: 18px;
+			right: 30px;
+		}
+	}
+
+	&__grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 30px;
@@ -1095,7 +1141,7 @@ a {
 		&-title {
 			font-size: clamp(18px, 3vw, 32px);
 			font-weight: 400;
-			line-height: 125%; /* 40px */
+			line-height: 125%;
 			letter-spacing: 1px;
 		}
 
@@ -1104,7 +1150,7 @@ a {
 			flex-direction: column;
 			gap: 5px;
 			font-size: clamp(14px, 2.5vw, 18px);
-			line-height: 125%; /* 22.5px */
+			line-height: 125%;
 		}
 
 		&-paragraph {
@@ -1115,9 +1161,13 @@ a {
 		}
 	}
 }
+h1.animals__title {
+	text-align: left;
+	width: 100%;
+}
 @media (max-width: 992px) {
 	.animals {
-		&__cards {
+		&__grid {
 			grid-template-columns: repeat(2, 1fr);
 			gap: 30px;
 		}
@@ -1125,7 +1175,28 @@ a {
 }
 @media (max-width: 768px) {
 	.animals {
-		&__cards {
+		&__container {
+			gap: 15px;
+		}
+		&__tab {
+			padding: 6px 10px;
+			line-height: 165%;
+		}
+
+		&__search {
+			max-width: 100%;
+			width: 100%;
+			padding: 8px 34px 8px 10px;
+
+			&-group {
+				width: 100%;
+			}
+			&-icon {
+				right: 10px;
+			}
+		}
+
+		&__grid {
 			grid-template-columns: repeat(1, 1fr);
 			gap: 15px;
 		}
@@ -1204,7 +1275,7 @@ a {
 			text-align: center;
 			font-size: clamp(18px, 3.5vw, 32px);
 			font-weight: 400;
-			line-height: 125%; /* 40px */
+			line-height: 125%;
 			letter-spacing: 1px;
 		}
 
@@ -1217,7 +1288,7 @@ a {
 			text-align: center;
 			font-weight: 400;
 			font-size: clamp(16px, 2.5vw, 20px);
-			line-height: 135%; /* 27px */
+			line-height: 135%;
 		}
 
 		&-list {
@@ -1287,7 +1358,7 @@ a {
 	&__text {
 		font-size: clamp(16px, 3vw, 20px);
 		font-weight: 400;
-		line-height: 135%; /* 27px */
+		line-height: 135%;
 	}
 
 	&__connect {
@@ -1302,7 +1373,7 @@ a {
 		&-text {
 			font-size: clamp(16px, 3vw, 20px);
 			font-weight: 400;
-			line-height: 135%; /* 27px */
+			line-height: 135%;
 		}
 
 		&-links {
@@ -1334,7 +1405,7 @@ a {
 		&-title {
 			font-size: clamp(18px, 3.5vw, 24px);
 			font-weight: 500;
-			line-height: 24.7px; /* 102.917% */
+			line-height: 102.917%;
 			text-transform: uppercase;
 		}
 
@@ -1342,7 +1413,7 @@ a {
 			font-size: clamp(16px, 3vw, 20px);
 
 			font-weight: 400;
-			line-height: 135%; /* 27px */
+			line-height: 135%;
 		}
 
 		&-list {
@@ -1356,7 +1427,7 @@ a {
 				margin-left: 25px;
 				font-size: clamp(16px, 3vw, 20px);
 				font-weight: 400;
-				line-height: 135%; /* 27px */
+				line-height: 135%;
 
 				&::before {
 					content: '';
@@ -1495,14 +1566,14 @@ a {
 			color: var(--primary-400);
 			font-size: 42px;
 			font-weight: 500;
-			line-height: 90%; /* 37.8px */
+			line-height: 90%;
 			letter-spacing: 1px;
 		}
 
 		&-text {
 			font-size: 20px;
 			font-weight: 400;
-			line-height: 135%; /* 27px */
+			line-height: 135%;
 		}
 	}
 }
@@ -1556,21 +1627,21 @@ a {
 		&-title {
 			font-size: clamp(16px, 2vw, 20px);
 			font-weight: 400;
-			line-height: 135%; /* 27px */
+			line-height: 135%;
 		}
 
 		&-text {
 			color: var(--gray-500);
 			font-size: clamp(14px, 1.5vw, 16px);
 			font-weight: 400;
-			line-height: 125%; /* 20px */
+			line-height: 125%;
 		}
 
 		&-link {
 			color: var(--primary-500);
 			font-size: clamp(14px, 1.5vw, 16px);
 			font-weight: 400;
-			line-height: 165%; /* 26.4px */
+			line-height: 165%;
 			text-decoration-line: underline;
 		}
 	}
@@ -1656,7 +1727,7 @@ a {
 		&-date {
 			font-size: clamp(14px, 1.5vw, 16px);
 			font-weight: 400;
-			line-height: 125%; /* 20px */
+			line-height: 125%;
 		}
 
 		&-group {
@@ -1668,20 +1739,20 @@ a {
 			color: var(--primary-500);
 			font-size: clamp(16px, 2vw, 20px);
 			font-weight: 400;
-			line-height: 135%; /* 27px */
+			line-height: 135%;
 		}
 
 		&-text {
 			font-size: clamp(14px, 1.5vw, 16px);
 			font-weight: 400;
-			line-height: 125%; /* 20px */
+			line-height: 125%;
 		}
 
 		&-link {
 			color: var(--primary-500);
 			font-size: clamp(14px, 1.5vw, 16px);
 			font-weight: 400;
-			line-height: 165%; /* 26.4px */
+			line-height: 165%;
 			text-decoration-line: underline;
 		}
 	}
@@ -1932,7 +2003,6 @@ h1.news__title {
 }
 
 // form
-
 .form {
 	display: flex;
 	flex-direction: column;
@@ -2065,14 +2135,199 @@ h1.news__title {
 	}
 }
 
+// Animal page
+
+.animal {
+	&__container {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 30px;
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__title {
+		text-transform: uppercase;
+
+		&-mobile {
+			width: 100%;
+			text-align: left;
+		}
+	}
+
+	&__info {
+		display: flex;
+		flex-direction: column;
+		gap: 12px;
+
+		&-paragraph {
+			display: flex;
+			gap: 10px;
+			font-size: clamp(16px, 3vw, 20px);
+			font-weight: 400;
+			line-height: 165%;
+		}
+
+		&-links {
+			display: flex;
+			align-items: center;
+			gap: 15px;
+		}
+
+		&-link {
+			width: 32px;
+			height: 32px;
+			img {
+				width: inherit;
+				height: inherit;
+			}
+		}
+	}
+
+	&__important {
+		display: flex;
+		padding: 30px;
+		flex-direction: column;
+		justify-content: center;
+		gap: 20px;
+		border-radius: 30px;
+		color: var(--white);
+		background: var(--secondary-500);
+
+		&-title {
+			font-size: clamp(18px, 3vw, 24px);
+			font-weight: 500;
+			line-height: 102.917%;
+			text-transform: uppercase;
+		}
+
+		&-paragraph {
+			font-size: clamp(16px, 3vw, 20px);
+			font-weight: 400;
+			line-height: 135%;
+		}
+
+		&-link {
+			text-decoration: underline;
+		}
+	}
+
+	&__connect {
+		display: flex;
+		flex-wrap: wrap;
+		padding: 30px;
+		align-items: center;
+		gap: 30px;
+		border-radius: 30px;
+		color: var(--white);
+		background: var(--primary-200);
+
+		&-title {
+			font-size: clamp(18px, 3vw, 24px);
+			font-weight: 500;
+			line-height: 102.917%;
+			text-transform: uppercase;
+		}
+
+		&-links {
+			display: flex;
+			flex-wrap: wrap;
+			gap: 28.125px;
+		}
+
+		&-link {
+			width: 60px;
+			height: 60px;
+
+			img {
+				width: inherit;
+				height: inherit;
+			}
+		}
+	}
+
+	&__image {
+		display: flex;
+		flex-direction: column;
+		gap: 30px;
+	}
+
+	&__swiper {
+		&-preview {
+		}
+	}
+}
+@media (max-width: 768px) {
+	.animal {
+		&__container {
+			display: flex;
+			flex-direction: column-reverse;
+			gap: 15px;
+		}
+
+		&__content {
+			gap: 15px;
+		}
+
+		&__info {
+			gap: 5px;
+		}
+
+		&__important {
+			gap: 10px;
+			padding: 15px 20px;
+
+			&-title {
+				line-height: 137.222%;
+			}
+
+			&-paragraph {
+				line-height: 165%;
+			}
+		}
+
+		&__connect {
+			flex-direction: column;
+			flex-wrap: nowrap;
+			align-items: flex-start;
+			gap: 10px;
+			padding: 15px 20px;
+
+			&-links {
+				width: 100%;
+				flex-wrap: nowrap;
+				justify-content: space-between;
+				gap: 10px;
+			}
+
+			&-link {
+				width: 45px;
+				height: 45px;
+			}
+		}
+
+		&__image {
+			gap: 15px;
+		}
+
+		&__swiper {
+			&-preview {
+			}
+		}
+	}
+}
+
 // Common overrides
 .mobile-visible {
 	display: none;
-	justify-content: center;
 }
 @media (max-width: 768px) {
 	.mobile-visible {
-		display: flex;
+		display: inline-block;
 	}
 }
 .mobile-hidden {
