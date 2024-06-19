@@ -1174,6 +1174,10 @@ h1.animals__title {
 	}
 }
 @media (max-width: 768px) {
+	h2.animals__title {
+		text-transform: uppercase;
+	}
+
 	.animals {
 		&__container {
 			gap: 15px;
@@ -2138,6 +2142,13 @@ h1.news__title {
 // Animal page
 
 .animal {
+	&__section {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 30px;
+	}
+
 	&__container {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -2263,6 +2274,10 @@ h1.news__title {
 }
 @media (max-width: 768px) {
 	.animal {
+		&__section {
+			gap: 15px;
+		}
+
 		&__container {
 			display: flex;
 			flex-direction: column-reverse;
@@ -2342,8 +2357,15 @@ h1.news__title {
 .gap-0 {
 	gap: 0;
 }
-.gap-15 {
-	gap: 15px;
+.gap-sm {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+@media (max-width: 768px) {
+	.gap-sm {
+		gap: 15px;
+	}
 }
 
 /* Preset */
