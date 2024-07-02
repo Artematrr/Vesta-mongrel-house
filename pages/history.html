@@ -5,8 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="/img/icon/favicon-white.svg" type="image/x-icon">
-	<link rel="stylesheet" href="/styles/style.css">
 	<title>Дом дворняги веста</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
@@ -72,7 +74,7 @@
 						<p>Михаил и Марина влюбились в Ролли с первого взгляда</p>
 					</div>
 				</div>
-				<div class="head__image frame"><img src="/img/head-3	.png" alt="МИХАИЛ, МАРИНА И РОЛЛИ" loading="lazy">
+				<div class="head__image frame"><img src="/img/head-3.png" alt="МИХАИЛ, МАРИНА И РОЛЛИ" loading="lazy">
 				</div>
 			</div>
 		</section>
@@ -100,14 +102,81 @@
 					кому это нужно прямо сейчас.</p>
 			</div>
 		</section>
-		<section class="container mobile-hidden">
+		<section class="container">
 			<a href="#" class="button button-back">Назад</a>
 		</section>
 
-		<section class="container">
+		<section>
 			<div class="histories__container">
-				<h2 class="histories__title">Другие счастливые истории наших друзей</h2>
-				<div class="histories__swiper"></div>
+				<div class="container">
+					<h2 class="histories__title">Другие счастливые истории наших друзей</h2>
+				</div>
+				<div class="histories__swiper swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="histories__card">
+								<div class="histories__card-image">
+									<img src="/img/happy-1.png" alt="Никита, Лиза и Бимбо (Руан)">
+								</div>
+								<div class="histories__card-content">
+									<h3 class="histories__card-title">Никита, Лиза и Бимбо (Руан)</h3>
+									<div class="histories__card-text">
+										<p>Mы с мужем долго мечтали о собаке, но решиться на такой ответственный шаг всегда сложно, поэтому
+											ежедневное листание сайтов с носами из приютов стало нашим ритуалом, а спонтанность придала
+											уверенности!</p>
+									</div>
+									<a href="#" class="histories__card-link">Читать</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="histories__card">
+								<div class="histories__card-image">
+									<img src="/img/happy-2.png" alt="Никита, Лиза и Бимбо (Руан)">
+								</div>
+								<div class="histories__card-content">
+									<h3 class="histories__card-title">Никита, Лиза и Бимбо (Руан)</h3>
+									<div class="histories__card-text">
+										<p>Mы с мужем долго мечтали о собаке, но решиться на такой ответственный шаг всегда сложно, поэтому
+											ежедневное листание сайтов с носами из приютов стало нашим ритуалом, а спонтанность придала
+											уверенности!</p>
+									</div>
+									<a href="#" class="histories__card-link">Читать</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="histories__card">
+								<div class="histories__card-image">
+									<img src="/img/happy-3.png" alt="Анна и Мона (Чита)">
+								</div>
+								<div class="histories__card-content">
+									<h3 class="histories__card-title">Анна и Мона (Чита)</h3>
+									<div class="histories__card-text">
+										<p>Малышка Чита обрела дом и новое имя - теперь она Мона! Скоро здесь будет счастливая история от
+											хозяйки
+											Моны :)</p>
+									</div>
+									<a href="#" class="histories__card-link">Читать</a>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="histories__card">
+								<div class="histories__card-image">
+									<img src="/img/happy-4.png" alt="Анна и Баффи (Келли)">
+								</div>
+								<div class="histories__card-content">
+									<h3 class="histories__card-title">Анна и Баффи (Келли)</h3>
+									<div class="histories__card-text">
+										<p>Ура! Красавица Келли обрела свой дом! Скоро тут будет ее счастливая история.</p>
+									</div>
+									<a href="#" class="histories__card-link">Читать</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
 				<a href="#" class="histories__button button button-uppercase button-gray">Все наши истории</a>
 			</div>
 		</section>
@@ -173,6 +242,7 @@
 		</div>
 	</footer>
 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="/scripts/script.js"></script>
 </body>
 

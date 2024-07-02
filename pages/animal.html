@@ -5,8 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="shortcut icon" href="/img/icon/favicon-white.svg" type="image/x-icon">
-	<link rel="stylesheet" href="/styles/style.css">
 	<title>Дом дворняги веста</title>
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="stylesheet" href="/styles/style.css">
 </head>
 
 <body>
@@ -80,11 +82,7 @@
 							<a href="#" class="animal__info-link"><img src="/img/icon/WhatsApp.svg" alt="WhatsApp"></a>
 							<a href="#" class="animal__info-link"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
 						</div>
-
-
-
 					</div>
-
 
 					<div class="animal__important">
 						<h3 class="animal__important-title">Важная информация</h3>
@@ -96,7 +94,6 @@
 								class="animal__important-link">кошек</a> и <a href="#" class="animal__important-link">собак</a>.
 						</p>
 					</div>
-
 
 					<div class="animal__connect">
 						<h3 class="animal__connect-title">Поделиться</h3>
@@ -110,7 +107,8 @@
 						</div>
 					</div>
 				</div>
-				<div class="animal__image">
+
+				<div class="animal__images">
 					<h1 class="animal__title animal__title-mobile mobile-visible">Чернышка</h1>
 					<div class="animal__info mobile-visible">
 						<p class="animal__info-paragraph"><span class="text-gray">Пол:</span><span>Девочка</span></p>
@@ -120,12 +118,27 @@
 							<span>/</span>
 							<span>Стерилизованна</span>
 						</p>
-
 					</div>
-					<div class="animal__swiper-preview">
-						<img src="/img/animal-big-1.png" alt="Чернышка">
+					<div class="animal__swiper-preview swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-1.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-2.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-3.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
+						</div>
 					</div>
-					<div class="animal__swiper">свайпер</div>
+					<div class="animal__swiper swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-1.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-2.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-3.png" alt="Чернышка"></div>
+							<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
+						</div>
+						<div class="swiper-button-prev"></div>
+						<div class="swiper-button-next"></div>
+					</div>
 				</div>
 			</div>
 			<div class="text">
@@ -148,15 +161,194 @@
 					вторым питомцем в семье.
 				</p>
 			</div>
-			<a href="#" class="button button-back mobile-hidden">Назад</a>
+			<a href="#" class="button button-back">Назад</a>
 		</section>
 
 
 
-		<section class="continer">
+		<section>
 			<div class="animals__container">
-				<h2 class="animals__title">Срочно ищут дом</h2>
-				<div class="animals__swiper"></div>
+				<div class="container">
+					<h2 class="animals__title">Срочно ищут дом</h2>
+				</div>
+				<div class="animals__swiper swiper">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a href="#" class="animals__card">
+								<div class="animals__card-image">
+									<img src="/img/animal-1.png" alt="Мусена" loading="lazy">
+								</div>
+								<div class="animals__card-text">
+									<h3 class="animals__card-title">Мусена</h3>
+									<div class="animals__card-info">
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Пол:</span>
+											<span>Девочка</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Порода:</span>
+											<span>Метис</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Возраст:</span>
+											<span>1 год</span>
+										</p>
+										<div class="animals__card-paragraph">
+											<span>Вакцинирована</span>
+											<span>/</span>
+											<span>Стерилизованна</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="animals__card">
+								<div class="animals__card-image">
+									<img src="/img/animal-2.png" alt="Рыжик" loading="lazy">
+								</div>
+								<div class="animals__card-text">
+									<h3 class="animals__card-title">Рыжик</h3>
+									<div class="animals__card-info">
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Пол:</span>
+											<span>Мальчик</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Порода:</span>
+											<span>Метис</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Возраст:</span>
+											<span>1 год 5 мес.</span>
+										</p>
+										<div class="animals__card-paragraph">
+											<span>Вакцинирована</span>
+											<span>/</span>
+											<span>Не кастрирован</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="animals__card">
+								<div class="animals__card-image">
+									<img src="/img/animal-3.png" alt="Мусена" loading="lazy">
+								</div>
+								<div class="animals__card-text">
+									<h3 class="animals__card-title">Мусена</h3>
+									<div class="animals__card-info">
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Пол:</span>
+											<span>Девочка</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Порода:</span>
+											<span>Метис</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Возраст:</span>
+											<span>1 год</span>
+										</p>
+										<div class="animals__card-paragraph">
+											<span>Вакцинирована</span>
+											<span>/</span>
+											<span>Стерилизованна</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="animals__card">
+								<div class="animals__card-image">
+									<img src="/img/animal-1.png" alt="Мусена" loading="lazy">
+								</div>
+								<div class="animals__card-text">
+									<h3 class="animals__card-title">Мусена</h3>
+									<div class="animals__card-info">
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Пол:</span>
+											<span>Девочка</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Порода:</span>
+											<span>Метис</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Возраст:</span>
+											<span>1 год</span>
+										</p>
+										<div class="animals__card-paragraph">
+											<span>Вакцинирована</span>
+											<span>/</span>
+											<span>Стерилизованна</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="animals__card">
+								<div class="animals__card-image">
+									<img src="/img/animal-2.png" alt="Рыжик" loading="lazy">
+								</div>
+								<div class="animals__card-text">
+									<h3 class="animals__card-title">Рыжик</h3>
+									<div class="animals__card-info">
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Пол:</span>
+											<span>Мальчик</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Порода:</span>
+											<span>Метис</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Возраст:</span>
+											<span>1 год 5 мес.</span>
+										</p>
+										<div class="animals__card-paragraph">
+											<span>Вакцинирована</span>
+											<span>/</span>
+											<span>Не кастрирован</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a href="#" class="animals__card">
+								<div class="animals__card-image">
+									<img src="/img/animal-3.png" alt="Мусена" loading="lazy">
+								</div>
+								<div class="animals__card-text">
+									<h3 class="animals__card-title">Мусена</h3>
+									<div class="animals__card-info">
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Пол:</span>
+											<span>Девочка</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Порода:</span>
+											<span>Метис</span>
+										</p>
+										<p class="animals__card-paragraph">
+											<span class="text-gray">Возраст:</span>
+											<span>1 год</span>
+										</p>
+										<div class="animals__card-paragraph">
+											<span>Вакцинирована</span>
+											<span>/</span>
+											<span>Стерилизованна</span>
+										</div>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
 				<a href="#" class="animals__button button button-uppercase button-primary">Хочу взять друга!</a>
 			</div>
 
@@ -224,6 +416,7 @@
 		</div>
 	</footer>
 
+	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="/scripts/script.js"></script>
 </body>
 
