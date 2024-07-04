@@ -1,16 +1,18 @@
 new Swiper('.histories__swiper', {
 	grabCursor: true,
 	slidesPerView: 1,
-	spaceBetween: 30,
+	spaceBetween: 20,
 
 	breakpoints: {
 		320: {
 			slidesPerView: 1,
 			spaceBetween: 20,
+			autoHeight: true,			
 		},
 		768: {
 			slidesPerView: 2,
 			spaceBetween: 30,
+			autoHeight: false,
 		},
 		1440: {
 			slidesPerView: 3,
@@ -26,12 +28,12 @@ new Swiper('.histories__swiper', {
 new Swiper('.gallery__swiper', {
 	grabCursor: true,
 	slidesPerView: 1,
-	spaceBetween: 15,
+	spaceBetween: 20,
 	breakpoints: {
 		320: {
 			centeredSlides: true,
 			slidesPerView: 1.1,
-			spaceBetween: 15,
+			spaceBetween: 20,
 		},
 		540: {
 			centeredSlides: true,
@@ -56,16 +58,18 @@ new Swiper('.gallery__swiper', {
 new Swiper('.news__swiper', {
 	grabCursor: true,
 	slidesPerView: 1,
-	spaceBetween: 15,
+	spaceBetween: 20,
 	breakpoints: {
 		320: {
 			centeredSlides: true,
 			slidesPerView: 1,
-			spaceBetween: 15,
+			spaceBetween: 20,
+			autoHeight: true,			
 		},
 		768: {
 			slidesPerView: 2,
 			spaceBetween: 30,
+			autoHeight: false,			
 		},
 		1440: {
 			slidesPerView: 3,
@@ -107,12 +111,12 @@ new Swiper('.partner__swiper', {
 new Swiper('.animals__swiper', {
 	grabCursor: true,
 	slidesPerView: 1,
-	spaceBetween: 15,
+	spaceBetween: 20,
 	breakpoints: {
 		540: {
 			centeredSlides: true,
 			slidesPerView: 1,
-			spaceBetween: 15,
+			spaceBetween: 20,
 		},
 		768: {
 			slidesPerView: 3,
@@ -139,16 +143,12 @@ new Swiper('.animals__tabs', {
 	},
 })
 
-const animalSwiper = new Swiper('.animal__swiper', {
-	grabCursor: true,
-	slidesPerView: 1,
+var animalSwiper = new Swiper('.animal__swiper', {
+	slidesPerView: 2,
 	spaceBetween: 10,
 	watchSlidesProgress: true,
 	breakpoints: {
-		320: {
-			slidesPerView: 2,
-		},
-		768: {
+		375: {
 			slidesPerView: 3,
 		},
 	},
@@ -158,9 +158,27 @@ const animalSwiper = new Swiper('.animal__swiper', {
 	},
 })
 
-const animalSwiperPreview = new Swiper('.animal__swiper-preview', {
+var animalSwiperPreview = new Swiper('.animal__swiper-preview', {
 	grabCursor: true,
 	slidesPerView: 1,
 	spaceBetween: 30,
 	thumbs: { swiper: `.animal__swiper` },
+})
+
+jQuery(document).ready(function () {
+	$("[type='tel']").mask('+7 (999) 999-99-99')
+
+	var $menu = $('.header__menu')
+	var $menuExpand = $('.header__menu-expand')
+	var menuTouched = false
+	$menu.on('touchend click', function () {
+		if (!menuTouched) {
+			menuTouched = true
+			setTimeout(function () {
+				menuTouched = false
+			}, 100)
+			$menuExpand.toggleClass('open')
+		}
+		return false
+	})
 })

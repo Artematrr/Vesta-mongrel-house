@@ -18,8 +18,9 @@
 			<div class="header__mobile">
 				<a href="#" class="header__mobile-logo"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
 				<a href="#" class="header__mobile-button button button-secondary">Помочь приюту</a>
-				<a class="header__mobile-menu">menu</a>
+				<a class="header__menu header__mobile-menu"><img src="/img/icon/menu.svg" alt=""></a>
 			</div>
+
 			<a href="#" class="header__logo"><img src="/img/logo.svg" alt="Дом дворняги веста"></a>
 			<a href="#" class="header__logo-md"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
 			<div class="header__content">
@@ -41,10 +42,37 @@
 						<li class="header__list-item"><a class="header__link link-nav" href="#">Чем помочь?</a></li>
 						<li class="header__list-item"><a class="header__link link-nav" href="#">Новости</a></li>
 						<li class="header__list-item"><a class="header__link link-nav" href="#">Партнеры</a></li>
-						<li class="header__list-item"><a class="header__menu">menu</a></li>
+						<li class="header__list-item"><a class="header__menu"><img src="/img/icon/menu.svg" alt=""></a></li>
 					</ul>
 				</nav>
 			</div>
+		</div>
+
+		<div class="header__menu-container">
+			<div class="header__menu-expand">
+				<nav class="header__nav">
+					<ul class="header__list">
+						<li class="header__list-item"><a class="header__link link-nav" href="#">О приюте</a></li>
+						<li class="header__list-item"><a class="header__link link-nav link-active" href="#">Взять животное</a></li>
+						<li class="header__list-item"><a class="header__link link-nav" href="#">Счастливые истории</a></li>
+						<li class="header__list-item"><a class="header__link link-nav" href="#">Чем помочь?</a></li>
+						<li class="header__list-item"><a class="header__link link-nav" href="#">Новости</a></li>
+						<li class="header__list-item"><a class="header__link link-nav" href="#">Партнеры</a></li>
+						<li class="header__list-item"><a class="header__link link-nav" href="#">Контакты</a></li>
+					</ul>
+				</nav>
+				<div class="header__contact-button mobile-visible"><a href="#" class="button button-secondary">Помочь приюту</a>
+				</div>
+				<div class="header__contact mobile-visible">
+					<a href="tel:+8(800)000-00-00" class="header__contact-tel">8 800 000 00 00</a>
+					<div class="header__contact-social">
+						<a href="#" class="header__contact-item"><img src="/img/icon/WhatsApp.svg" alt="WhatsApp"></a>
+						<a href="#" class="header__contact-item"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
+					</div>
+				</div>
+			</div>
+
+
 		</div>
 	</header>
 
@@ -109,8 +137,8 @@
 				</div>
 
 				<div class="animal__images">
-					<h1 class="animal__title animal__title-mobile mobile-visible">Чернышка</h1>
-					<div class="animal__info mobile-visible">
+					<h1 class="animal__title justify-content-start mobile-visible">Чернышка</h1>
+					<div class="animal__info justify-content-start mobile-visible">
 						<p class="animal__info-paragraph"><span class="text-gray">Пол:</span><span>Девочка</span></p>
 						<p class="animal__info-paragraph"><span class="text-gray">Порода:</span><span>Метис</span></p>
 						<p class="animal__info-paragraph"><span class="text-gray">Возраст:</span><span>1 год</span></p>
@@ -128,13 +156,16 @@
 							<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
 						</div>
 					</div>
-					<div class="animal__swiper swiper">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
-							<div class="swiper-slide"><img src="/img/animal-1.png" alt="Чернышка"></div>
-							<div class="swiper-slide"><img src="/img/animal-2.png" alt="Чернышка"></div>
-							<div class="swiper-slide"><img src="/img/animal-3.png" alt="Чернышка"></div>
-							<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
+					<div class="animal__swiper-container">
+						<div class="animal__swiper swiper">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
+								<div class="swiper-slide"><img src="/img/animal-1.png" alt="Чернышка"></div>
+								<div class="swiper-slide"><img src="/img/animal-2.png" alt="Чернышка"></div>
+								<div class="swiper-slide"><img src="/img/animal-3.png" alt="Чернышка"></div>
+								<div class="swiper-slide"><img src="/img/animal-big-1.png" alt="Чернышка"></div>
+							</div>
+
 						</div>
 						<div class="swiper-button-prev"></div>
 						<div class="swiper-button-next"></div>
@@ -416,8 +447,11 @@
 		</div>
 	</footer>
 
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="/scripts/script.js"></script>
+	<script src="/scripts/jquery.mask.min.js"></script>
 </body>
 
 </html>
