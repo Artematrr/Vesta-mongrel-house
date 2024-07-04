@@ -3,11 +3,12 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/img/icon/favicon-white.svg" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<title>Дом дворняги веста</title>
+	<meta name="description" content="Дом дворняги веста">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="icon" type="image/svg+xml" href="/img/icon/favicon-white.svg">
+	<link rel="stylesheet" href="/styles/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="/styles/style.css">
 </head>
 
@@ -18,9 +19,15 @@
 			<div class="header__mobile">
 				<a href="#" class="header__mobile-logo"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
 				<a href="#" class="header__mobile-button button button-secondary">Помочь приюту</a>
-				<a class="header__menu header__mobile-menu"><img src="/img/icon/menu.svg" alt=""></a>
+				<div class="header__menu">
+					<input class="header__menu-checkbox js-menu-checkbox" type="checkbox" name="header__menu-checkbox" />
+					<div class="header__menu-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+				</div>
 			</div>
-
 			<a href="#" class="header__logo"><img src="/img/logo.svg" alt="Дом дворняги веста"></a>
 			<a href="#" class="header__logo-md"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
 			<div class="header__content">
@@ -30,35 +37,42 @@
 						<a href="#" class="header__contact-item"><img src="/img/icon/WhatsApp.svg" alt="WhatsApp"></a>
 						<a href="#" class="header__contact-item"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
 					</div>
-					<div class="header__contact-geo"><a href="#" class="header__contact-item"> <img
-								src="/img/icon/geoposition.svg" alt="geoposition"></a></div>
-					<div class="header__contact-button"><a href="#" class="button button-secondary">Помочь приюту</a></div>
+					<a href="#" class="header__contact-item"> <img src="/img/icon/geoposition.svg" alt="geoposition"></a>
+					<a href="#" class="button button-secondary">Помочь приюту</a>
 				</div>
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__list-item"><a class="header__link link-nav link-active" href="#">О приюте</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Взять животное</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Счастливые истории</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Чем помочь?</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Новости</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Партнеры</a></li>
-						<li class="header__list-item"><a class="header__menu"><img src="/img/icon/menu.svg" alt=""></a></li>
+						<li class="header__list-item"><a class="link-nav link-active" href="#">О приюте</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Взять животное</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Счастливые истории</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Чем помочь?</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Новости</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Партнеры</a></li>
+						<li class="header__list-item">
+							<div class="header__menu">
+								<input class="header__menu-checkbox js-menu-checkbox" type="checkbox" name="header__menu-checkbox" />
+								<div class="header__menu-lines">
+									<span class="line line1"></span>
+									<span class="line line2"></span>
+									<span class="line line3"></span>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-
 		<div class="header__menu-container">
 			<div class="header__menu-expand">
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__list-item"><a class="header__link link-nav link-active" href="#">О приюте</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Взять животное</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Счастливые истории</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Чем помочь?</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Новости</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Партнеры</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Контакты</a></li>
+						<li class="header__list-item"><a class="link-nav link-active" href="#">О приюте</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Взять животное</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Счастливые истории</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Чем помочь?</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Новости</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Партнеры</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header__contact-button mobile-visible"><a href="#" class="button button-secondary">Помочь приюту</a>
@@ -71,8 +85,6 @@
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 	</header>
 
@@ -86,10 +98,9 @@
 	<main class="main">
 
 		<section class="container">
-
 			<div class="head__container">
 				<div class="head__content">
-					<h1 class="head__title">Мы - команда волонтёров муниципального приюта для безнадзорных и бесхозяйных животных
+					<h1 class="h1">Мы - команда волонтёров муниципального приюта для безнадзорных и бесхозяйных животных
 					</h1>
 				</div>
 				<div class="head__image frame"><img src="/img/head-2.png"
@@ -112,11 +123,9 @@
 						<p class="digit__text">кошек</p>
 					</div>
 				</div>
-
 				<div class="digit__image frame">
-					<img src="/img/digit.png" alt="" loading="lazy">
+					<img src="/img/digit.png" alt="Приют в цифрах" loading="lazy">
 				</div>
-
 				<div class="digit__group digit__group-right">
 					<div class="digit__block">
 						<p class="digit__text">Нам помогли</p>
@@ -128,13 +137,10 @@
 						<p class="digit__number">127</p>
 						<p class="digit__text">волонтеров</p>
 					</div>
-
-					<div class="digit__image-mobile frame">
-						<img src="/img/digit.png" alt="" loading="lazy">
-					</div>
-
 				</div>
-
+				<div class="digit__image-mobile frame">
+					<img src="/img/digit.png" alt="Приют в цифрах" loading="lazy">
+				</div>
 			</div>
 		</section>
 
@@ -163,10 +169,9 @@
 				<div class="media__image-mobile frame">
 					<img src="/img/meet-mobile.png" loading="lazy" alt="Давайте знакомиться">
 				</div>
-
 				<div class="media__content">
-					<h2 class="media__title">Давайте знакомиться</h2>
-					<div class="media__text text">
+					<h2 class="h2">Давайте знакомиться</h2>
+					<div class="text">
 						<p>Мы — волонтеры муниципального приюта для бездомных животных, такие же люди как и Вы, мы работаем, учимся,
 							имеем семьи и своих питомцев дома. Волонтёрство – это наш выбор, желание безвозмездно помогать братьям
 							нашим меньшим.</p>
@@ -183,16 +188,14 @@
 						<p>Для знакомства с конкретным животным необходимо связаться с его опекуном, контакты которого вы можете
 							найти в карточках подопечных на нашем сайте.</p>
 					</div>
-
 				</div>
 			</div>
 		</section>
 
 		<section class="container">
 			<div class="schedule__container">
-
 				<div class="schedule__content">
-					<h2 class="schedule__title">Режим работы</h2>
+					<h2 class="schedule__title h2">Режим работы</h2>
 					<div class="schedule__image-mobile frame">
 						<img src="/img/schedule-mobile.png" alt="Режим работы" loading="lazy">
 					</div>
@@ -204,7 +207,6 @@
 						<p class="schedule__connect-text">Посещение приюта возможно только по предварительной договоренности о
 							визите. Связаться можно просто написав на почту или в мессенджеры
 						</p>
-
 						<div class="schedule__connect-links">
 							<a href="#" class="schedule__connect-link"><img src="/img/icon/Whatsapp.svg" alt="Whatsapp"></a>
 							<a href="#" class="schedule__connect-link"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
@@ -226,20 +228,17 @@
 							<p class="schedule__important-paragraph">Пройти на территорию и находиться на ней без волонтера вы не
 								сможете.</p>
 						</div>
-
-
 					</div>
 				</div>
 				<div class="schedule__image frame">
 					<img src="/img/schedule.png" alt="Режим работы" loading="lazy">
 				</div>
-
 			</div>
 		</section>
 
 		<section class="container mobile-hidden">
 			<div class="rules__container">
-				<h2 class="rules__title">Правила посещения приюта</h2>
+				<h2 class="rules__title h2">Правила посещения приюта</h2>
 				<div class="rules__cards">
 					<div class="rules__group">
 						<div class="rules__card">
@@ -267,17 +266,14 @@
 							<p class="rules__card-text">Для прохода на территорию приюта Вам потребуется паспорт</p>
 						</div>
 					</div>
-
-
 				</div>
-
 			</div>
 		</section>
 
 		<section>
 			<div class="gallery__container">
 				<div class="container">
-					<h2 class="gallery__title">Фотогалерея</h2>
+					<h2 class="gallery__title h2">Фотогалерея</h2>
 				</div>
 				<div class="gallery__swiper swiper">
 					<div class="swiper-wrapper">
@@ -321,16 +317,15 @@
 								<img src="/img/gallery-4.png" alt="Келли">
 							</div>
 						</div>
-
 					</div>
 				</div>
-				<a href="#" class="gallery__button button button-uppercase button-gray">Больше фотографий</a>
+				<a href="#" class="button button-uppercase button-gray">Больше фотографий</a>
 			</div>
 		</section>
 
 		<section class="container">
 			<div class="news__container">
-				<h2 class="news__title">Хорошие новости нашего приюта</h2>
+				<h2 class="news__title h2">Хорошие новости нашего приюта</h2>
 				<div class="news__swiper swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -444,7 +439,7 @@
 
 		<section class="container">
 			<div class="partner__container">
-				<h2 class="partner__title">Наши партнеры</h2>
+				<h2 class="h2">Наши партнеры</h2>
 				<div class="partner__swiper swiper">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
@@ -479,7 +474,6 @@
 
 	</main>
 
-
 	<footer class="footer">
 		<div class="footer__inner">
 			<div class="footer__info">
@@ -492,7 +486,6 @@
 				<p class="p">© 2024 Все права защищены.</p>
 				<p class="p">Политика конфиденциальности</p>
 			</div>
-
 			<div class="footer__menu">
 				<ul class="footer__list">
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">О приюте</a></li>
@@ -502,8 +495,6 @@
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">Новости</a></li>
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">Партнеры</a></li>
 				</ul>
-
-
 				<ul class="footer__list">
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">О приюте</a></li>
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">Взять животное</a></li>
@@ -529,20 +520,15 @@
 							alt="Odnoklassniki (OK)"></a>
 					<a href="#" class="footer__contact-item"><img src="/img/icon/YouTube.svg" alt="YouTube"></a>
 				</div>
-				<div class="footer__contact-button"><a href="#" class="button button-secondary button-uppercase">Помочь
-						приюту</a>
-				</div>
-
+				<a href="#" class="button button-secondary button-uppercase">Помочь приюту</a>
 			</div>
-		</div>
 		</div>
 	</footer>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="/scripts/script.js"></script>
+	<script src="/scripts/swiper-bundle.min.js"></script>
+	<script src="/scripts/jquery-3.7.1.min.js"></script>
 	<script src="/scripts/jquery.mask.min.js"></script>
+	<script src="/scripts/script.js"></script>
 </body>
 
 </html>

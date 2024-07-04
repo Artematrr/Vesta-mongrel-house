@@ -26,9 +26,7 @@ dd {
 }
 body {
 	min-height: 100dvh;
-	scroll-behavior: smooth;
-	text-rendering: optimizeSpeed;
-	// text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
 	font-synthesis: none;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -37,6 +35,9 @@ body {
 	font-weight: 400;
 	min-width: 300px;
 	font-family: Inter, system-ui, Arial, sans-serif;
+}
+html {
+	scroll-behavior: smooth;
 }
 ul[class],
 ol[class] {

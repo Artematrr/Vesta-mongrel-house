@@ -7,7 +7,7 @@ new Swiper('.histories__swiper', {
 		320: {
 			slidesPerView: 1,
 			spaceBetween: 20,
-			autoHeight: true,			
+			autoHeight: true,
 		},
 		768: {
 			slidesPerView: 2,
@@ -32,7 +32,7 @@ new Swiper('.gallery__swiper', {
 	breakpoints: {
 		320: {
 			centeredSlides: true,
-			slidesPerView: 1.1,
+			slidesPerView: 1.2,
 			spaceBetween: 20,
 		},
 		540: {
@@ -64,12 +64,12 @@ new Swiper('.news__swiper', {
 			centeredSlides: true,
 			slidesPerView: 1,
 			spaceBetween: 20,
-			autoHeight: true,			
+			autoHeight: true,
 		},
 		768: {
 			slidesPerView: 2,
 			spaceBetween: 30,
-			autoHeight: false,			
+			autoHeight: false,
 		},
 		1440: {
 			slidesPerView: 3,
@@ -166,19 +166,30 @@ var animalSwiperPreview = new Swiper('.animal__swiper-preview', {
 })
 
 jQuery(document).ready(function () {
-	$("[type='tel']").mask('+7 (999) 999-99-99')
+	$("input[type='tel']").mask('+7 (999) 999-99-99')
 
-	var $menu = $('.header__menu')
+	var $menuCheckbox = $('.js-menu-checkbox')
 	var $menuExpand = $('.header__menu-expand')
-	var menuTouched = false
-	$menu.on('touchend click', function () {
-		if (!menuTouched) {
-			menuTouched = true
-			setTimeout(function () {
-				menuTouched = false
-			}, 100)
-			$menuExpand.toggleClass('open')
+	$menuCheckbox.each(function () {
+		$(this).on('change', function () {
+			if ($(this).is(':checked')) {
+				$menuExpand.addClass('open')
+				$menuCheckbox.prop('checked', true)
+			} else {
+				$menuExpand.removeClass('open')
+				$menuCheckbox.prop('checked', false)
+			}
+		})
+	})
+	$(document).on('click touchstart', function (e) {
+		if (
+			!$('.header__menu-expand').is(e.target) &&
+			$('.header__menu-expand').has(e.target).length === 0 &&
+			!$('.js-menu-checkbox').is(e.target) &&
+			$('.js-menu-checkbox').has(e.target).length === 0
+		) {
+			$menuCheckbox.prop('checked', false)
+			$menuExpand.removeClass('open')
 		}
-		return false
 	})
 })

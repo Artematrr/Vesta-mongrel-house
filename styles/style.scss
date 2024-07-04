@@ -35,7 +35,7 @@
 			height: 8px;
 		}
 		&::-webkit-scrollbar-button {
-			width: 8px;
+			width: 0px;
 			height: 0px;
 		}
 		&::-webkit-scrollbar-thumb {
@@ -54,14 +54,6 @@ body {
 	font-style: normal;
 	font-weight: 400;
 	line-height: 125%;
-}
-html {
-	scroll-behavior: smooth;
-}
-@media (prefers-reduced-motion: reduce) {
-	html {
-		scroll-behavior: auto;
-	}
 }
 
 h1,
@@ -119,6 +111,8 @@ img {
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 125%;
+	transition: opacity 0.1s ease-in-out, background 0.1s ease-in-out,
+		color 0.1s ease-in-out;
 
 	&:hover {
 		cursor: pointer;
@@ -163,10 +157,12 @@ img {
 		color: var(--primary-500);
 		background: var(--gray-200);
 		&:hover {
-			color: var(--primary-500);
+			color: var(--white);
+			background: var(--primary-500);
 		}
 		&:active {
-			color: var(--primary-500);
+			color: var(--white);
+			background: var(--primary-500);
 		}
 	}
 
@@ -194,24 +190,18 @@ img {
 			border-right: 14px solid var(--gray-100);
 		}
 	}
-
-	&-wrapper {
-		display: flex;
-		align-items: flex-start;
-		width: 100%;
-	}
 }
 a {
 	text-decoration: none;
 	color: inherit;
+	transition: color 0.1s ease-in-out;
+
 	&:hover {
 		cursor: pointer;
-		// color: var(--primary-500);
 		color: inherit;
 	}
 	&:active {
 		color: var(--primary-500);
-		// color: inherit;
 	}
 }
 .link {
@@ -313,6 +303,7 @@ a {
 		font-size: 14px;
 		font-weight: 500;
 		line-height: 142.857%;
+		transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
 
 		&:hover {
 			background: var(--gray-100);
@@ -350,18 +341,28 @@ a {
 	height: auto;
 }
 .swiper-button-prev {
+	background-image: url('/img/icon/arrow-prev.svg') !important;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
 	width: 32px;
 	height: 32px;
-	z-index: 1;
 	left: 0;
-	background: url('/img/icon/arrow-prev.svg') no-repeat center;
+	&::after {
+		display: none;
+	}
 }
 .swiper-button-next {
+	background-image: url('/img/icon/arrow-next.svg') !important;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+	background-position: center;
 	width: 32px;
 	height: 32px;
-	z-index: 1;
 	right: 0;
-	background: url('/img/icon/arrow-next.svg') no-repeat center;
+	&::after {
+		display: none;
+	}
 }
 
 // header
@@ -439,12 +440,6 @@ a {
 			height: 32px;
 			overflow: hidden;
 		}
-
-		&-geo {
-		}
-
-		&-button {
-		}
 	}
 
 	&__nav {
@@ -460,24 +455,89 @@ a {
 		justify-content: space-between;
 		gap: 10px;
 		width: 100%;
-
-		&-item {
-		}
-	}
-
-	&__link {
 	}
 
 	&__menu {
+		position: relative;
 		display: flex;
-		padding: 5px;
 		justify-content: center;
 		align-items: center;
+		height: 32px;
+		width: 32px;
 		background-color: var(--white);
 		border-radius: 3px;
+		overflow: hidden;
 
-		&:hover {
-			background-color: var(--gray-100);
+		&-checkbox {
+			position: absolute;
+			display: block;
+			height: 100%;
+			width: 100%;
+			left: -4px;
+			z-index: 3;
+			opacity: 0;
+			cursor: pointer;
+
+			&:hover {
+				~ .header__menu-lines .line {
+					background-color: var(--gray-500);
+				}
+			}
+
+			&:checked {
+				~ .header__menu-lines .line1 {
+					transform: rotate(45deg);
+					transition: transform 0.4s ease-in-out,
+						background-color 0.2s ease-in-out;
+				}
+
+				~ .header__menu-lines .line2 {
+					transform: scaleY(0);
+					transition: transform 0.2s ease-in-out,
+						background-color 0.2s ease-in-out;
+				}
+
+				~ .header__menu-lines .line3 {
+					transform: rotate(-45deg);
+					transition: transform 0.4s ease-in-out,
+						background-color 0.2s ease-in-out;
+				}
+			}
+		}
+
+		&-lines {
+			position: absolute;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			height: 18px;
+			width: 24px;
+			z-index: 2;
+
+			.line {
+				display: block;
+				height: 2px;
+				width: 100%;
+				border-radius: 10px;
+				background: var(--black);
+			}
+
+			.line1 {
+				transform-origin: 0% 0%;
+				transition: transform 0.4s ease-in-out,
+					background-color 0.1s ease-in-out;
+			}
+
+			.line2 {
+				transition: transform 0.2s ease-in-out,
+					background-color 0.2s ease-in-out;
+			}
+
+			.line3 {
+				transform-origin: 0% 100%;
+				transition: transform 0.4s ease-in-out,
+					background-color 0.3s ease-in-out;
+			}
 		}
 
 		&-container {
@@ -494,6 +554,7 @@ a {
 			display: flex;
 			align-items: flex-start;
 			width: 340px;
+			max-height: 400px;
 			padding: 35px 30px;
 			flex-direction: column;
 			gap: 30px;
@@ -502,8 +563,11 @@ a {
 			z-index: 2;
 			height: 0;
 			opacity: 0;
-			overflow: hidden;
-			transition: all 0.2s ease-in-out;
+			overflow: auto;
+			scrollbar-width: thin;
+			overscroll-behavior: contain;
+			transition: opacity 0.2s ease-in-out, height 0.2s ease-in-out,
+				top 0.2s ease-in-out;
 
 			.header__list {
 				align-items: flex-start;
@@ -515,7 +579,6 @@ a {
 				flex-wrap: wrap;
 			}
 		}
-
 		&-expand.open {
 			top: calc(100% + 1px);
 			height: auto;
@@ -535,8 +598,6 @@ a {
 		}
 		&-button {
 			padding: 8px 15px;
-		}
-		&-menu {
 		}
 	}
 }
@@ -565,8 +626,6 @@ a {
 			display: none;
 		}
 		&__menu {
-			&-container {
-			}
 			&-expand {
 				left: 0;
 				width: 100%;
@@ -677,9 +736,6 @@ a {
 		align-items: flex-start;
 		flex-shrink: 1;
 		gap: 15px;
-
-		&-item {
-		}
 	}
 
 	&__contact {
@@ -736,9 +792,6 @@ a {
 			display: flex;
 			align-items: center;
 			gap: 15px;
-		}
-
-		&-button {
 		}
 	}
 }
@@ -806,14 +859,16 @@ a {
 	&__section {
 		display: flex;
 		flex-direction: column;
-		// align-items: center;
+		align-items: center;
 		gap: 30px;
 	}
 
 	&__container {
 		display: flex;
 		align-items: center;
+		justify-content: space-between;
 		gap: 15px;
+		width: 100%;
 	}
 
 	&__content {
@@ -827,9 +882,6 @@ a {
 		font-size: clamp(18px, 2.5vw, 24px);
 		font-weight: 400;
 		line-height: 125%;
-	}
-
-	&__title {
 	}
 
 	&__image {
@@ -879,6 +931,7 @@ a {
 		gap: 30px;
 		border-radius: 0px 50px 50px 50px;
 		border: 2px solid var(--white);
+		transition: border 0.1s ease-in-out;
 
 		&:hover {
 			border: 2px solid var(--secondary-500);
@@ -961,15 +1014,6 @@ a {
 		flex-direction: column;
 		gap: 30px;
 		align-items: flex-start;
-	}
-
-	&__title {
-	}
-
-	&__text {
-	}
-
-	&__button {
 	}
 }
 @media (max-width: 1200px) {
@@ -1097,12 +1141,20 @@ a {
 			&-left {
 				.digit__block {
 					align-items: center;
+
+					.digit__text:first-child {
+						text-align: right;
+					}
 				}
 			}
 
 			&-right {
 				.digit__block {
 					align-items: center;
+
+					.digit__text:first-child {
+						text-align: right;
+					}
 				}
 			}
 		}
@@ -1165,6 +1217,7 @@ a {
 		background: var(--gray-200);
 		font-size: clamp(16px, 2.5vw, 20px);
 		line-height: 135%;
+		transition: background 0.01s ease-in-out, color 0.01s ease-in-out;
 
 		&:hover {
 			color: var(--white);
@@ -1233,9 +1286,11 @@ a {
 		padding-bottom: 30px;
 		border-radius: 15px;
 		border: 1px solid var(--gray-300);
+		transition: box-shadow 0.1s ease-in-out;
 
 		&:hover {
 			color: var(--black);
+			box-shadow: var(--shadow);
 		}
 
 		&-image {
@@ -1285,10 +1340,6 @@ a {
 .animals__tabs .swiper-slide {
 	max-width: fit-content;
 }
-h1.animals__title {
-	text-align: left;
-	width: 100%;
-}
 @media (max-width: 992px) {
 	.animals {
 		&__grid {
@@ -1298,7 +1349,7 @@ h1.animals__title {
 	}
 }
 @media (max-width: 768px) {
-	h2.animals__title {
+	.h2.animals__title {
 		text-transform: uppercase;
 	}
 
@@ -1365,9 +1416,6 @@ h1.animals__title {
 				img {
 					object-fit: cover;
 					aspect-ratio: 1.1 / 1;
-					// height: auto;
-
-					// width: max-content;
 				}
 			}
 		}
@@ -1443,9 +1491,6 @@ h1.animals__title {
 			}
 		}
 	}
-
-	&__button {
-	}
 }
 @media (max-width: 992px) {
 	.help {
@@ -1493,9 +1538,6 @@ h1.animals__title {
 			border-radius: inherit;
 		}
 	}
-
-	&__button {
-	}
 }
 @media (max-width: 768px) {
 	.gallery {
@@ -1507,8 +1549,6 @@ h1.animals__title {
 		}
 	}
 }
-
-// About page
 
 // schedule
 .schedule {
@@ -1605,11 +1645,16 @@ h1.animals__title {
 
 			li {
 				position: relative;
-
 				margin-left: 25px;
 				font-size: clamp(16px, 3vw, 20px);
 				font-weight: 400;
 				line-height: 135%;
+
+				&:hover {
+					img {
+						padding-left: 5px;
+					}
+				}
 
 				&::before {
 					content: '';
@@ -1631,6 +1676,7 @@ h1.animals__title {
 				}
 
 				img {
+					transition: padding 0.1s ease-in-out;
 					margin-left: 10px;
 				}
 			}
@@ -1760,8 +1806,7 @@ h1.animals__title {
 	}
 }
 
-// Histories page
-
+// histories
 .histories {
 	&__section {
 		display: flex;
@@ -1846,14 +1891,7 @@ h1.animals__title {
 			font-weight: 400;
 			line-height: 165%;
 			text-decoration-line: underline;
-
-			&:hover {
-				color: var(--primary-300);
-			}
 		}
-	}
-
-	&__pagination {
 	}
 }
 @media (max-width: 992px) {
@@ -1905,8 +1943,7 @@ h1.animals__title {
 	}
 }
 
-// News page
-
+// news
 .news {
 	&__container {
 		display: flex;
@@ -1939,6 +1976,7 @@ h1.animals__title {
 			align-items: center;
 			max-height: 270px;
 			border-radius: 15px 15px 0px 0px;
+			min-height: 200px;
 
 			img {
 				border-radius: inherit;
@@ -1985,16 +2023,6 @@ h1.animals__title {
 			text-decoration-line: underline;
 		}
 	}
-
-	&__pagination {
-	}
-
-	&__swiper {
-	}
-}
-h1.news__title {
-	width: 100%;
-	text-align: left;
 }
 @media (max-width: 768px) {
 	.news {
@@ -2050,12 +2078,6 @@ h1.news__title {
 		gap: 30px;
 	}
 
-	&__title {
-	}
-
-	&__swiper {
-	}
-
 	&__image {
 		display: flex;
 		justify-content: center;
@@ -2082,17 +2104,12 @@ h1.news__title {
 	}
 }
 
-// Contacts page
-
 // contacts
 .contacts {
 	&__container {
 		display: flex;
 		flex-direction: column;
 		gap: 30px;
-	}
-
-	&__title {
 	}
 
 	&__content {
@@ -2230,7 +2247,6 @@ h1.news__title {
 }
 
 // map
-
 .map {
 	&__container {
 		display: flex;
@@ -2310,12 +2326,6 @@ h1.news__title {
 		gap: 20px;
 	}
 
-	&__group {
-	}
-
-	&__label {
-	}
-
 	&__input {
 		display: flex;
 		padding: 10px 20px;
@@ -2338,7 +2348,7 @@ h1.news__title {
 			line-height: 165%;
 		}
 
-		::-moz-placeholder {
+		&::-moz-placeholder {
 			color: var(--black);
 			font-size: clamp(14px, 2vw, 16px);
 			font-weight: 400;
@@ -2408,8 +2418,7 @@ h1.news__title {
 	}
 }
 
-// Animal page
-
+// animal
 .animal {
 	&__section {
 		display: flex;
@@ -2417,11 +2426,6 @@ h1.news__title {
 		align-items: flex-start;
 		gap: 30px;
 	}
-
-	// &-mobile {
-	// 	width: 100%;
-	// 	text-align: left;
-	// }
 
 	&__container {
 		display: grid;

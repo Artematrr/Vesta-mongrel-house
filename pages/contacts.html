@@ -3,11 +3,12 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="shortcut icon" href="/img/icon/favicon-white.svg" type="image/x-icon">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 	<title>Дом дворняги веста</title>
+	<meta name="description" content="Дом дворняги веста">
 
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+	<link rel="icon" type="image/svg+xml" href="/img/icon/favicon-white.svg">
+	<link rel="stylesheet" href="/styles/swiper-bundle.min.css" />
 	<link rel="stylesheet" href="/styles/style.css">
 </head>
 
@@ -18,9 +19,15 @@
 			<div class="header__mobile">
 				<a href="#" class="header__mobile-logo"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
 				<a href="#" class="header__mobile-button button button-secondary">Помочь приюту</a>
-				<a class="header__menu header__mobile-menu"><img src="/img/icon/menu.svg" alt=""></a>
+				<div class="header__menu">
+					<input class="header__menu-checkbox js-menu-checkbox" type="checkbox" name="header__menu-checkbox" />
+					<div class="header__menu-lines">
+						<span class="line line1"></span>
+						<span class="line line2"></span>
+						<span class="line line3"></span>
+					</div>
+				</div>
 			</div>
-
 			<a href="#" class="header__logo"><img src="/img/logo.svg" alt="Дом дворняги веста"></a>
 			<a href="#" class="header__logo-md"><img src="/img/logo-mobile.svg" alt="Дом дворняги веста"></a>
 			<div class="header__content">
@@ -30,35 +37,42 @@
 						<a href="#" class="header__contact-item"><img src="/img/icon/WhatsApp.svg" alt="WhatsApp"></a>
 						<a href="#" class="header__contact-item"><img src="/img/icon/Telegram.svg" alt="Telegram"></a>
 					</div>
-					<div class="header__contact-geo"><a href="#" class="header__contact-item"> <img
-								src="/img/icon/geoposition.svg" alt="geoposition"></a></div>
-					<div class="header__contact-button"><a href="#" class="button button-secondary">Помочь приюту</a></div>
+					<a href="#" class="header__contact-item"> <img src="/img/icon/geoposition.svg" alt="geoposition"></a>
+					<a href="#" class="button button-secondary">Помочь приюту</a>
 				</div>
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__list-item"><a class="header__link link-nav" href="#">О приюте</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Взять животное</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Счастливые истории</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Чем помочь?</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Новости</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Партнеры</a></li>
-						<li class="header__list-item"><a class="header__menu"><img src="/img/icon/menu.svg" alt=""></a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">О приюте</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Взять животное</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Счастливые истории</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Чем помочь?</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Новости</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Партнеры</a></li>
+						<li class="header__list-item">
+							<div class="header__menu">
+								<input class="header__menu-checkbox js-menu-checkbox" type="checkbox" name="header__menu-checkbox" />
+								<div class="header__menu-lines">
+									<span class="line line1"></span>
+									<span class="line line2"></span>
+									<span class="line line3"></span>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</div>
 		</div>
-
 		<div class="header__menu-container">
 			<div class="header__menu-expand">
 				<nav class="header__nav">
 					<ul class="header__list">
-						<li class="header__list-item"><a class="header__link link-nav" href="#">О приюте</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Взять животное</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Счастливые истории</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Чем помочь?</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Новости</a></li>
-						<li class="header__list-item"><a class="header__link link-nav" href="#">Партнеры</a></li>
-						<li class="header__list-item"><a class="header__link link-nav link-active" href="#">Контакты</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">О приюте</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Взять животное</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Счастливые истории</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Чем помочь?</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Новости</a></li>
+						<li class="header__list-item"><a class="link-nav" href="#">Партнеры</a></li>
+						<li class="header__list-item"><a class="link-nav link-active" href="#">Контакты</a></li>
 					</ul>
 				</nav>
 				<div class="header__contact-button mobile-visible"><a href="#" class="button button-secondary">Помочь приюту</a>
@@ -71,8 +85,6 @@
 					</div>
 				</div>
 			</div>
-
-
 		</div>
 	</header>
 
@@ -87,11 +99,8 @@
 
 		<section class="container">
 			<div class="contacts__container">
-
-				<h1 class="contacts__title">Контакты</h1>
-
+				<h1 class="contacts__title h1">Контакты</h1>
 				<div class="contacts__content">
-
 					<div class="contacts__col">
 						<div class="contacts__social">
 							<a href="tel:+8(800)000-00-00" class="contacts__tel">8 800 000 00 00</a>
@@ -106,7 +115,6 @@
 							<p class="text-gray">Фактический адрес</p>
 						</div>
 					</div>
-
 					<div class="contacts__col">
 						<div class="contacts__social">
 							<div class="contacts__social-links">
@@ -135,48 +143,33 @@
 							</div>
 						</div>
 					</div>
-
 				</div>
 			</div>
 		</section>
 
 		<section class="container map__section">
 			<div class="map__container">
-				<h2 class="map__title">Карта проезда</h2>
+				<h2 class="map__title h2">Карта проезда</h2>
 				<div class="map__wrapper">
 					<iframe
 						src="https://yandex.ru/map-widget/v1/?um=constructor%3A451132f0cdaf80e038a993efed3b565645a1b169e30aae36dab6ca5e3bbc24c9&amp;source=constructor"
 						width="100%" height="400" frameborder="0"></iframe>
-
 				</div>
 			</div>
 		</section>
 
-
 		<section class="container">
 			<div class="form__container">
 				<form action="" method="post" class="form">
-					<h2 class="form__title">Задайте свой вопрос нашим специалистам</h2>
+					<h2 class="form__title h2">Задайте свой вопрос нашим специалистам</h2>
 					<div class="form__row">
 						<div class="form__col">
-							<div class="form__group">
-								<label class="form__label" for="name" hidden>Имя</label>
-								<input class="form__input" type="text" id="name" placeholder="Имя" required>
-							</div>
-							<div class="form__group">
-								<label class="form__label" for="phone" hidden>Ваш телефон</label>
-								<input class="form__input" type="tel" id="phone" placeholder="Ваш телефон" required>
-							</div>
-							<div class="form__group">
-								<label class="form__label" for="email" hidden>Ваша почта</label>
-								<input class="form__input" type="email" id="email" placeholder="Ваша почта" required>
-							</div>
+							<input class="form__input" type="text" id="name" placeholder="Имя" required>
+							<input class="form__input" type="tel" id="phone" placeholder="Ваш телефон" required>
+							<input class="form__input" type="email" id="email" placeholder="Ваша почта" required>
 						</div>
-						<div class="form__group">
-							<label class="form__label" for="message" hidden>Введите сообщение</label>
-							<textarea class="form__input form__input-textarea" id="message" rows="7" cols="30"
-								placeholder="Введите сообщение" required></textarea>
-						</div>
+						<textarea class="form__input form__input-textarea" id="message" rows="7" cols="30"
+							placeholder="Введите сообщение" required></textarea>
 					</div>
 					<div class="form__privacy">
 						<p class="form__text">Нажимая на кнопку, я соглашаюсь на <a href="#" class="form__link">обработку
@@ -187,9 +180,7 @@
 			</div>
 		</section>
 
-
 	</main>
-
 
 	<footer class="footer">
 		<div class="footer__inner">
@@ -203,7 +194,6 @@
 				<p class="p">© 2024 Все права защищены.</p>
 				<p class="p">Политика конфиденциальности</p>
 			</div>
-
 			<div class="footer__menu">
 				<ul class="footer__list">
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">О приюте</a></li>
@@ -213,8 +203,6 @@
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">Новости</a></li>
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">Партнеры</a></li>
 				</ul>
-
-
 				<ul class="footer__list">
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">О приюте</a></li>
 					<li class="footer__list-item"><a class="footer__link link-nav" href="#">Взять животное</a></li>
@@ -240,21 +228,15 @@
 							alt="Odnoklassniki (OK)"></a>
 					<a href="#" class="footer__contact-item"><img src="/img/icon/YouTube.svg" alt="YouTube"></a>
 				</div>
-				<div class="footer__contact-button"><a href="#" class="button button-secondary button-uppercase">Помочь
-						приюту</a>
-				</div>
-
+				<a href="#" class="button button-secondary button-uppercase">Помочь приюту</a>
 			</div>
-		</div>
 		</div>
 	</footer>
 
-
-	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
-		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-	<script src="/scripts/script.js"></script>
+	<script src="/scripts/swiper-bundle.min.js"></script>
+	<script src="/scripts/jquery-3.7.1.min.js"></script>
 	<script src="/scripts/jquery.mask.min.js"></script>
+	<script src="/scripts/script.js"></script>
 </body>
 
 </html>
