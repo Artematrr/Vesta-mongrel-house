@@ -163,6 +163,20 @@ var animalSwiperPreview = new Swiper('.animal__swiper-preview', {
 	slidesPerView: 1,
 	spaceBetween: 30,
 	thumbs: { swiper: `.animal__swiper` },
+	// function to stop youtube video on slidechange
+	on: {
+		slideChange: function (el) {
+			$('.swiper-slide').each(function () {
+				var youtubePlayer = $(this).find('iframe').get(0)
+				if (youtubePlayer) {
+					youtubePlayer.contentWindow.postMessage(
+						'{"event":"command","func":"pauseVideo","args":""}',
+						'*'
+					)
+				}
+			})
+		},
+	},
 })
 
 jQuery(document).ready(function () {
